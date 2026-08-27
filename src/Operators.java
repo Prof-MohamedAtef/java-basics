@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Operators {
     public static void main(String[] args) {
 //        String name = "Mohamed";
@@ -127,16 +129,129 @@ public class Operators {
 //        System.out.println(result);
 
 
+//
+//        int a = 10;
+//        int b = 25;
+//        int c = 15;
+//
+//        int largest = (a > b)
+//                ? (a > c ? a : c)
+//                : (b > c ? b : c);
+//
+//        System.out.println("Largest number = " + largest);
 
-        int a = 10;
-        int b = 25;
-        int c = 15;
+//        int a = 20;
+//        int b = a;
+//        System.out.println(b);
+//        b = 100;
+//
+//        System.out.println(a);
+//        System.out.println(b);
+//
+//        int[] a = {10, 20, 30};
+//        int[] b = a;
+//
+//        b[0] = 100;
+//
+//        System.out.println(a[0]);
 
-        int largest = (a > b)
-                ? (a > c ? a : c)
-                : (b > c ? b : c);
+//        String name = "Ahmed";
+//
+//        String newName = name.concat(" Ali");
+//
+//        System.out.println(name);
+//        System.out.println(newName);
+//
+//        String name1 = "Ahmed";
+//        String name2 = name1;
+////        System.out.println(name2);
+//        name2 = "Ali";
+//
+//        int[] numbers1 = {10, 20};
+//        int[] numbers2 = numbers1;
+//
+//        numbers2[0] = 500;
+////
+//        System.out.println(name1);
+//        System.out.println(name2);
+////
+//        System.out.println(numbers1[0]);
+//        System.out.println(numbers2[0]);
+//
+//        Character ch = 'a';
+//
 
-        System.out.println("Largest number = " + largest);
 
+        /*
+        primitives
+         */
+//
+//        double r = 2.5;
+//        float t = 3.5f;
+//        long m = 80L;
+////        int x = 5;
+//        x = 10;
+//        System.out.println(x);
+//
+//        String name = "Mohamed";
+//
+//        name = "Ahmed";
+//        System.out.println(name);
+////
+////        name = name + "Fares";
+////        System.out.println(name);
+////
+//        String newName = name.concat("Omar");
+//        System.out.println(newName);
+
+//        StringBuilder builder = new StringBuilder("Hi");
+//        builder.append(", I am Mohamed");
+//        builder.append(", I am 33 years old");
+//        System.out.println(builder);
+
+        /*
+        primitives
+         */
+
+//        int x = 8;
+//        /*
+//        reference types
+//         */
+//        Double xx = 8.2;
+//        String name = "Fares";
+//        name = "Omar";
+//        String userName = name.concat("asadas");
+
+        /*
+        One Dimensional Array
+         */
+
+//        int[] numbers = new int[10];
+//        numbers[0] = 5;
+//        numbers[1] = 8;
+//        numbers[2] = 12;
+//        numbers[4] = 18;
+//
+//        for (int counter = 0; counter < numbers.length; counter++) {
+//            System.out.println(numbers[counter]);
+//        }
+//
+
+//        fruits[0] = "Banana";
+//        fruits[1] = "Apple";
+//        for (int i = 0; i < fruits.length; i++) {
+//            System.out.println(fruits[i] + " number: " + numbers[i]);
+//        }
+
+        Scanner scanner = new Scanner(System.in);
+        String[] fruits = new String[10];
+        for (int i = 0; i < fruits.length; i++) {
+            System.out.println("Enter Fruit Name");
+            fruits[i] = scanner.nextLine();
+        }
+
+        for (String fruit: fruits){
+            System.out.println(fruit);
+        }
     }
 }

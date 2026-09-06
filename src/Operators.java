@@ -431,14 +431,75 @@ public class Operators {
 
         /*
         Task 14 - Sum Until a Limit
-         */
+//         */
+//
+//        int number = 1;
+//        int limit = 50;
+//        int sum = 1;
+//        int lastNumber = 0;
+//        while (sum < limit) {
+//            sum += sum;
+//            lastNumber = number;
+//            number++;
+//        }
+//        System.out.println(sum);
 
-        int limit = 50;
-        int sum = 1;
-        while (sum < limit){
-            sum+= sum;
-            sum++;
+/*
+Create an int array containing
+14, 7, 22, 35, 10, 41, 18, and 50.
+Use loops and if statements to:
+(1) print every element,
+(2) calculate the sum,
+(3) calculate the average,
+(4) find the largest value,
+(5) find the smallest value,
+(6) count even numbers,
+and (7) count values greater than the average.
+ */
+
+        int[] array = {14, 7, 22, 35, 10, 41, 18, 50};
+
+        int evenCount = 0;
+        int sum = 0;
+        int largest = 0;
+        int smallest = 0;
+        double average = 0;
+        largest = array[0];
+        smallest = array[0];
+        StringBuilder stringBuilder = new StringBuilder("Even Numbers are: ");
+
+        for (int i = 0; i < array.length; i++) {
+
+            if (array[i] > largest) {
+                largest = array[i];
+            }
+
+            if (array[i] < smallest) {
+                smallest = array[i];
+            }
+
+            System.out.println(array[i]);
+            sum += array[i];
+
+            if (array[i] % 2 == 0) {
+                stringBuilder.append(array[i]);
+                stringBuilder.append(", ");
+                evenCount += array[i];
+            }
         }
-        System.out.println(sum);
+
+        average = (double) sum / array.length;
+
+
+        System.out.println("Total: " + sum);
+        System.out.println("Average: " + average);
+        System.out.println("Largest: " + largest);
+        System.out.println("Smallest: " + smallest);
+
+        System.out.println(stringBuilder);
+
+        System.out.println("Total of Even Numbers: " + evenCount);
+
+
     }
 }

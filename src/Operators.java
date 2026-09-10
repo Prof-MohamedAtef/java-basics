@@ -457,6 +457,7 @@ Use loops and if statements to:
 and (7) count values greater than the average.
  */
 
+
         int[] array = {14, 7, 22, 35, 10, 41, 18, 50};
 
         int evenCount = 0;
@@ -490,16 +491,22 @@ and (7) count values greater than the average.
 
         average = (double) sum / array.length;
 
+        int count = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > average){
+                count++;
+            }
+        }
+
 
         System.out.println("Total: " + sum);
         System.out.println("Average: " + average);
         System.out.println("Largest: " + largest);
         System.out.println("Smallest: " + smallest);
-
         System.out.println(stringBuilder);
-
         System.out.println("Total of Even Numbers: " + evenCount);
-
+        System.out.println("Total Count More than Average: " + count);
 
     }
 }

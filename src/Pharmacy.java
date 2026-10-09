@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Pharmacy {
 
+    static float total = 0;
+
     public static void main(String[] args) {
         boolean isRunning = true;
 
@@ -28,10 +30,10 @@ public class Pharmacy {
                 float itemDiscount = scanner.nextFloat();
                 addItem(itemName, itemPrice, itemDiscount);
                 System.out.println("Final Price: " + addItem(itemPrice, itemDiscount));
+                System.out.println("Price after Final Discount: " + discount(total, 20));
             }
         }
     }
-
 
     public static void addItem(String name, float price, float discount){ // arguments
         System.out.println(
@@ -39,7 +41,12 @@ public class Pharmacy {
         );
     }
 
-    public static float addItem(float price, float discount){
-        return price - discount;
+    public static float addItem(float price, float _discount){
+        total = price - _discount;
+        return total;
+    }
+
+    public static float discount(float total, float discount){
+        return total - discount;
     }
 }
